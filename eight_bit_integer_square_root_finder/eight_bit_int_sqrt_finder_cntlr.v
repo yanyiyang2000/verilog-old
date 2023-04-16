@@ -27,14 +27,14 @@ module eight_bit_int_sqrt_finder_cntlr(
     output [7:0] sqrt
     );
     
-    reg idle = 1;    // idle bit
-    reg load = 0;    // load bit
-    reg add = 1;     // add bit
+    reg idle = 1;    // idle state
+    reg load = 0;    // load state
+    reg add = 1;     // add state
     reg en_a;        // enable bit for register A
     reg en_del;      // enable bit for register DEL
     reg en_sq;       // enable bit for register SQ
-    reg en_out;      // output enable bit
-    reg ld_add;      // load-shift bit for register DEL and SQ
+    reg en_out;      // enable bit for output
+    reg ld_add;      // load/add select bit for register DEL and SQ
     wire [7:0] q_sq; // output of register SQ
     wire [7:0] q_a;  // output of register A
     
